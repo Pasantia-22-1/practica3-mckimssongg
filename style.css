@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #444;
+}
+.container{
+
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.content__containerImg{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    
+}
+.zoom__info{
+    width: 60%;
+}
+.zoom__info::after{
+    content: "+";
+    color: #fff;
+    font-size: 4vw;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    
+}
+.zoom__info>img{
+    width: 100%;
+}
+.content__containerImg .zoom__info:hover.zoom__info::after{
+    display: block;
+}
+.content__containerImg .zoom__info:hover.zoom__info{
+    transition: all 1s;
+    transform: scale(1.2)
+}
